@@ -106,6 +106,10 @@ const Navbar = () => {
                   );
                 })}
               </div>
+
+              <div className="w-full bg-secondary absolute left-0 right-0 bottom-0">
+                <p>devstudio@gmail.com</p>
+              </div>
             </div>
           </motion.div>
         )}
