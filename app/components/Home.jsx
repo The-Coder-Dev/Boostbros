@@ -1,6 +1,6 @@
-'use client'
+"use client";
+import Link from "next/link";
 import Aurora from "./Aurora";
-
 
 const Home = () => {
   return (
@@ -14,11 +14,22 @@ const Home = () => {
 
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full py-10 ">
-        <div className="w-full h-1/2 flex items-start pt-40 md:pt-30 justify-center px-7">
-          <p className="text-white text-center text-sm md:text-base text-shadow-md max-w-lg">
-            Two bros, one mission helping your brand stand out. With
-            design flair and coding smarts, we boost what matters.
+        <div className="w-full h-1/2 flex items-center justify-center flex-col pt-40 md:pt-30 gap-3 px-7">
+          <p className=" text-white text-center text-sm md:text-base text-shadow-md max-w-lg">
+            Two bros, one mission helping your brand stand out. With design
+            flair and coding smarts, we boost what matters.
           </p>
+          <Link
+            href="/"
+            className="relative text-white hover:text-neutral-300 duration-300 transition-all 
+        after:absolute after:left-0 after:-bottom-1
+         after:h-0.5 after:w-full after:bg-white
+         after:scale-x-0 after:origin-left
+         after:transition-transform after:duration-300 after:ease-out
+         hover:after:scale-x-100"
+          >
+            view work
+          </Link>
         </div>
 
         <div className="w-full h-1/2 pb-10 md:pb-0 flex items-end justify-center">

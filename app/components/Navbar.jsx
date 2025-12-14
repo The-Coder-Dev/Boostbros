@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <header className="w-full flex items-center justify-center h-20  absolute top-0 left-0 z-999 text-white">
       <nav className="mx-auto max-w-375 flex items-center justify-between w-full h-full px-5">
-        <Link href="/" className="uppercase font-bold tracking-wide">
+        <Link href="/" className="uppercase font-bold tracking-wide mix-blend-difference">
           BoostBros
         </Link>
 
