@@ -12,9 +12,9 @@ const Home = () => {
       />
 
       {/* Hero content */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full px-5 py-10 ">
-        <div className="w-full h-1/2 flex items-start pt-40 md:pt-30 justify-center">
-          <p className="text-white text-center text-sm text-shadow-md">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full py-10 ">
+        <div className="w-full h-1/2 flex items-start pt-40 md:pt-30 justify-center px-7">
+          <p className="text-white text-center text-sm md:text-base text-shadow-md">
             Two bros, one mission helping your brand stand out.<br></br> With
             design flair and coding smarts, we boost what matters.
           </p>
