@@ -6,9 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
   { title: "Home", url: "/", id: 1 },
-  { title: "About", url: "/", id: 2 },
-  { title: "Work", url: "/", id: 3 },
-  { title: "Contact", url: "/", id: 4 },
+  { title: "About", url: "/about", id: 2 },
+  { title: "Work", url: "/work", id: 3 },
+  { title: "Contact", url: "/contact", id: 4 },
 ];
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,13 +18,14 @@ const Navbar = () => {
         <Link href="/" className="uppercase font-bold tracking-wide">
           BoostBros
         </Link>
-        <div className="flex items-center justify-between gap-6">
+
+        <div className="flex items-center justify-between gap-6 text-sm">
           <div className="gap-6 hidden md:flex">
             {links.map((item) => {
               return (
                 <div
                   key={item.id}
-                  className="group overflow-hidden relative hover:text-orange transition-colors duration-300"
+                  className="group overflow-hidden relative transition-colors duration-300"
                 >
                   <Link
                     className="block transition-transform duration-300 group-hover:-translate-y-6"
@@ -43,7 +44,10 @@ const Navbar = () => {
               );
             })}
           </div>
-
+          
+          <Link href="/" className="bg-secondary hover:bg-[#fc5a3a] transition-colors duration-300 hidden md:flex rounded-full px-5 py-2 ring-2 ring-[#fc5a3a] text-sm">
+            <p>Let's Talk</p>
+          </Link>
         </div>
         {/* Hamburger  */}
         <button
@@ -53,6 +57,7 @@ const Navbar = () => {
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
       </nav>
+
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -65,7 +70,7 @@ const Navbar = () => {
           >
             {/* Dark overlay */}
             <div
-              className="absolute inset-0  backdrop-blur-sm"
+              className="absolute inset-0 bg-primary/2 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
 
@@ -85,7 +90,7 @@ const Navbar = () => {
                       className="group overflow-hidden relative text-5xl font-black hover:text-orange transition-colors duration-300"
                     >
                       <Link
-                        className="font-[inter]  uppercase block transition-transform duration-300 group-hover:-translate-y-14"
+                        className="font-[inter]  uppercase block transition-transform duration-300 group-hover:-translate-y-4"
                         href={item.url}
                       >
                         {item.title}

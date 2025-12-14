@@ -1,6 +1,7 @@
 'use client'
 import Aurora from "./Aurora";
 
+
 const Home = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden bg-primary">
