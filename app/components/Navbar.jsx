@@ -18,29 +18,32 @@ const Navbar = () => {
         <Link href="/" className="font-[anton] uppercase text-xl tracking-wide">
           BoostBros
         </Link>
-        <div className="gap-6 hidden md:flex">
-          {links.map((item) => {
-            return (
-              <div
-                key={item.id}
-                className="group overflow-hidden relative hover:text-orange transition-colors duration-300"
-              >
-                <Link
-                  className="block transition-transform duration-300 group-hover:-translate-y-6"
-                  href={item.url}
+        <div className="flex items-center justify-between gap-6">
+          <div className="gap-6 hidden md:flex">
+            {links.map((item) => {
+              return (
+                <div
+                  key={item.id}
+                  className="group overflow-hidden relative hover:text-orange transition-colors duration-300"
                 >
-                  {item.title}
-                </Link>
+                  <Link
+                    className="block transition-transform duration-300 group-hover:-translate-y-6"
+                    href={item.url}
+                  >
+                    {item.title}
+                  </Link>
 
-                <Link
-                  className="absolute left-0 top-16 block transition-transform duration-300 group-hover:-translate-y-16"
-                  href={item.url}
-                >
-                  {item.title}
-                </Link>
-              </div>
-            );
-          })}
+                  <Link
+                    className="absolute left-0 top-16 block transition-transform duration-300 group-hover:-translate-y-16"
+                    href={item.url}
+                  >
+                    {item.title}
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+          
         </div>
         {/* Hamburger  */}
         <button
